@@ -57,6 +57,14 @@ AC_CHECK_HEADERS([sys/cdefs.h])
 
 
 dnl
+dnl Ncurses terminal library
+dnl
+
+AX_WITH_CURSES
+AX_WITH_CURSES_FORM
+
+
+dnl
 dnl Output
 dnl
 

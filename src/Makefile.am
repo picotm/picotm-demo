@@ -25,3 +25,7 @@
 bin_PROGRAMS = picotm-demo
 
 picotm_demo_SOURCES = main.c
+
+LDADD = @CURSES_LIBS@
+
+AM_CFLAGS = @CURSES_CFLAGS@
