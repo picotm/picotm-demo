@@ -24,8 +24,20 @@
 
 bin_PROGRAMS = picotm-demo
 
-picotm_demo_SOURCES = main.c
+picotm_demo_SOURCES = buf.c \
+                      buf.h \
+                      in.c \
+                      in.h \
+                      main.c \
+                      proc.c \
+                      proc.h \
+                      queue.c \
+                      queue.h \
+                      recovery.c \
+                      recovery.h \
+                      ui.c \
+                      ui.h
 
-LDADD = @CURSES_LIBS@
+LDADD = @FORM_LIBS@ @CURSES_LIBS@
 
 AM_CFLAGS = @CURSES_CFLAGS@
