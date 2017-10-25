@@ -21,9 +21,65 @@ Downloads and Contact
     http://github.com/picotm/picotm-demo
 
 
+Requirements
+============
+
+  Picotm-demo is written in C and requires
+
+    - a recent gcc compiler + environment, such as gcc 4.8 or later,
+    - picotm 0.9 or later,
+    - ncurses.
+
+  The build scripts depend on
+
+    - GNU autotools (autoconf and automake),
+    - GNU autoconf archive,
+    - GNU libtool,
+    - GNU make, and
+    - a recent Linux (for running the build scripts).
+
+  All source code is held in a git repository, so you'll need
+
+    - git
+
+  for development.
+
+
+Building picotm-demo
+====================
+
+  Make sure you have all requirements installed. To prepare your build,
+  invoke
+
+    tools/bootstrap.sh
+
+  This command generates the build system based on GNU autotools. If it
+  succeeds without errors, invoke
+
+    ./configure
+    make
+
+  This should configure and build picotm-demo for your system. Install with
+
+    sudo make install
+
+  You can find more detailed install instructions in the file INSTALL
+  that comes with this package.
+
+
+Running picotm-demo
+===================
+
+  After bulding and installing picotm-demo invoke
+
+    picotm-demo
+
+  from the command line. Press <ctrl-c> to exit the program.
+
+
 License
 =======
 
   Picotm-demo is distributed under the terms of the MIT License. You
   can find the full license text in the file LICENSE or at
-  http://choosealicense.com/licenses/mit/.
+  https://spdx.org/licenses/MIT.html.
