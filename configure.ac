@@ -65,6 +65,16 @@ AX_WITH_CURSES_FORM
 
 
 dnl
+dnl picotm
+dnl
+
+CHECK_PICOTM
+CHECK_PICOTM_TM
+CHECK_PICOTM_TXLIB
+CHECK_PICOTM_C
+
+
+dnl
 dnl Output
 dnl
 
