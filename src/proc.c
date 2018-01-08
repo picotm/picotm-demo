@@ -28,6 +28,7 @@
 #include <errno.h>
 #include <picotm/picotm.h>
 #include <picotm/picotm-tm.h>
+#include <picotm/stdbool.h>
 #include <picotm/stdlib.h>
 #include <picotm/string.h>
 #include <stdio.h>
@@ -96,7 +97,7 @@ proc_main_loop(struct queue* q, struct data_buf* buf)
                 free_tx(entry);
 
                 /* Continue loop until queue runs empty */
-                store__Bool_tx(&continue_loop, true);
+                store_bool_tx(&continue_loop, true);
 
             commit:
             picotm_commit
