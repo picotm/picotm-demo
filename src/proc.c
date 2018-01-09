@@ -94,7 +94,7 @@ proc_main_loop(struct queue* q, struct data_buf* buf)
 
                 /* Remove message from queue and free memory. */
                 txqueue_pop_tx(queue);
-                free_tx(entry);
+                destroy_queue_entry_tx(entry);
 
                 /* Continue loop until queue runs empty */
                 store_bool_tx(&continue_loop, true);

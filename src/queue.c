@@ -25,6 +25,7 @@
 
 #include "queue.h"
 #include <assert.h>
+#include <picotm/stdlib.h>
 
 void
 queue_entry_init(struct queue_entry* self)
@@ -32,4 +33,19 @@ queue_entry_init(struct queue_entry* self)
     assert(self);
 
     txqueue_entry_init(&self->entry);
+}
+
+struct queue_entry*
+create_queue_entry_tx()
+{
+    struct queue_entry* entry = malloc_tx(sizeof(*entry));
+    txqueue_entry_init_tm(&entry->entry);
+    return entry;
+}
+
+void
+destroy_queue_entry_tx(struct queue_entry* self)
+{
+    txqueue_entry_uninit_tm(&self->entry);
+    free_tx(self);
 }

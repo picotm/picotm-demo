@@ -85,7 +85,7 @@ read_file(int fd)
 
     picotm_begin
 
-        struct queue_entry* tx_entry = malloc_tx(sizeof(*entry));
+        struct queue_entry* tx_entry = create_queue_entry_tx();
 
         /* Read message header from input stream. The value of `fd` is a
          * constant on the stack; no need to load or privatize. The first
@@ -125,9 +125,6 @@ in_main_loop(const char* filename, struct queue* outq, size_t noutqs)
         if (!entry) {
             goto out;
         }
-
-        /* TODO: Add transaction interface for initialization. */
-        txqueue_entry_init(&entry->entry);
 
         /* Pick one of the output queues, enqueue the message and
          * send a signal to one of the processing threads.

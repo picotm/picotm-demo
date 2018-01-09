@@ -37,6 +37,12 @@ struct queue_entry {
 void
 queue_entry_init(struct queue_entry* self);
 
+struct queue_entry*
+create_queue_entry_tx(void);
+
+void
+destroy_queue_entry_tx(struct queue_entry* entry);
+
 struct queue {
 
     pthread_mutex_t mutex;
