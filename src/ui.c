@@ -26,6 +26,7 @@
 #include "ui.h"
 #include <assert.h>
 #include <picotm/picotm.h>
+#include <picotm/picotm-tm-ctypes.h>
 #include <picotm/stdlib.h>
 #include <stdlib.h>
 #include <unistd.h>
