@@ -27,7 +27,7 @@
 #include <errno.h>
 #include <picotm/fcntl.h>
 #include <picotm/picotm.h>
-#include <picotm/picotm-tm.h>
+#include <picotm/picotm-tm-ctypes.h>
 #include <picotm/stdlib.h>
 #include <picotm/unistd.h>
 #include <pthread.h>

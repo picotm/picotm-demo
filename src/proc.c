@@ -27,7 +27,7 @@
 #include <assert.h>
 #include <errno.h>
 #include <picotm/picotm.h>
-#include <picotm/picotm-tm.h>
+#include <picotm/picotm-tm-ctypes.h>
 #include <picotm/stdbool.h>
 #include <picotm/stdlib.h>
 #include <picotm/string.h>
